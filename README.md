@@ -13,8 +13,11 @@ Pipeline that ingests candidate data from structured and unstructured sources, n
 
 ```bash
 pip install -r requirements.txt
+```
+```bash
 Default run:
 Bashpython -m main samples/sample_recruiter.csv samples/your_resume.pdf
+```
 With custom config:
 Bashpython -m main samples/sample_recruiter.csv --config configs/example_config.json --output outputs/custom.json
 Project Structure
