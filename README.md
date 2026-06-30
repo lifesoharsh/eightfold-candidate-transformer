@@ -14,17 +14,31 @@ Pipeline that ingests candidate data from structured and unstructured sources, n
 ```bash
 pip install -r requirements.txt
 ```
-```bash
 Default run:
-Bashpython -m main samples/sample_recruiter.csv samples/your_resume.pdf
+```bash
+python -m main samples/sample_recruiter.csv samples/your_resume.pdf
 ```
 With custom config:
-Bashpython -m main samples/sample_recruiter.csv --config configs/example_config.json --output outputs/custom.json
-Project Structure
+```bash
+python -m main samples/sample_recruiter.csv --config configs/example_config.json --output outputs/custom.json
+```
+## Project Structure
 
-main.py — CLI interface
-transformer.py — Core pipeline
-sources/ — Parsers for each source type
-normalizers.py — Data cleaning
-merger.py — Deduplication
-config.py — Runtime projection
+```bash
+candidate-transformer/
+├── main.py                 # CLI entrypoint
+├── transformer.py          # Core pipeline logic
+├── config.py               # Runtime output projection
+├── normalizers.py          # Data normalization (phones, skills, etc.)
+├── merger.py               # Profile merging & conflict resolution
+├── sources/
+│   ├── base.py
+│   ├── recruiter_csv.py
+│   ├── ats_json.py
+│   ├── resume_pdf.py
+│   └── github.py
+├── configs/
+│   └── example_config.json
+├── samples/                # Put assignment input files here
+├── outputs/                # Generated results
+└── README.md
