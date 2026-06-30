@@ -1,32 +1,27 @@
 # Eightfold Multi-Source Candidate Data Transformer
 
-## Overview
-Pipeline that ingests structured (CSV/JSON) + unstructured (PDF/GitHub) candidate data, normalizes, merges, and projects to configurable canonical schema.
+Pipeline that ingests candidate data from structured and unstructured sources, normalizes, merges duplicates, and outputs a clean canonical profile with provenance and runtime-configurable projection.
+
+## Features
+- Supports structured (CSV, JSON) + unstructured (PDF, GitHub) sources
+- Normalization (phones E.164, canonical skills)
+- Merging with confidence-based conflict resolution
+- Runtime configurable output (field selection, rename, normalization)
+- Robust & deterministic
 
 ## Quick Start
+
 ```bash
 pip install -r requirements.txt
-python main.py samples/recruiter.csv samples/sample_resume.pdf --config configs/custom.json -o output.json
-```
+Default run:
+Bashpython -m main samples/sample_recruiter.csv samples/your_resume.pdf
+With custom config:
+Bashpython -m main samples/sample_recruiter.csv --config configs/example_config.json --output outputs/custom.json
+Project Structure
 
-## Project Structure
-- `main.py` - CLI entrypoint
-- `transformer.py` - Core logic
-- `sources/` - Parsers for each source type
-- `normalizers.py` - Phones, dates, skills
-- `merger.py` - Deduplication & conflict resolution
-- `config.py` - Runtime projection
-
-## Sample Inputs
-Place your assignment samples in `samples/`.
-
-## Custom Config Example
-See `configs/example_config.json`.
-
-## Demo
-Run the command above and record a 2-min video showing default + custom output.
-
-## Design Doc
-See `design.pdf` (one-pager covering pipeline, decisions, tradeoffs).
-
-**Meets all requirements**: Deterministic, robust, configurable, covers structured + unstructured sources.
+main.py — CLI interface
+transformer.py — Core pipeline
+sources/ — Parsers for each source type
+normalizers.py — Data cleaning
+merger.py — Deduplication
+config.py — Runtime projection
