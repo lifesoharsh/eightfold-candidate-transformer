@@ -16,11 +16,11 @@ pip install -r requirements.txt
 ```
 Default run:
 ```bash
-python -m main samples/sample_recruiter.csv samples/your_resume.pdf
+python -m main samples/sample_recruiter.csv samples/Resume.pdf
 ```
 With custom config:
 ```bash
-python -m main samples/sample_recruiter.csv --config configs/example_config.json --output outputs/custom.json
+python -m main samples/sample_recruiter.csv --config configs/example_config.json --output outputs/custom_output.json
 ```
 ## Project Structure
 
