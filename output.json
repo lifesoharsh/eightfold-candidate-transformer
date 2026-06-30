@@ -1,0 +1,55 @@
+{
+  "candidate_id": "resume_4466201969548662723",
+  "full_name": "Summary\nDeveloper",
+  "emails": [
+    "john.doe@example.com",
+    "harshmalik2003@gmail.com"
+  ],
+  "phones": [
+    "+15551234567",
+    "2025 - 07"
+  ],
+  "location": {
+    "city": "San Francisco",
+    "region": "",
+    "country": "US"
+  },
+  "headline": "Software Engineer",
+  "current_company": "TechCorp",
+  "provenance": [
+    {
+      "field": "all",
+      "source": "recruiter_csv",
+      "method": "direct"
+    },
+    {
+      "field": "all",
+      "source": "resume_pdf",
+      "method": "regex_extract"
+    }
+  ],
+  "overall_confidence": 0.82,
+  "skills": [
+    {
+      "name": "JavaScript",
+      "confidence": 0.8,
+      "sources": [
+        "resume_pdf"
+      ]
+    },
+    {
+      "name": "Python",
+      "confidence": 0.8,
+      "sources": [
+        "resume_pdf"
+      ]
+    },
+    {
+      "name": "Sql",
+      "confidence": 0.8,
+      "sources": [
+        "resume_pdf"
+      ]
+    }
+  ]
+}

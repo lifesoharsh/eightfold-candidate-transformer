@@ -1,0 +1,25 @@
+{
+  "candidate_id": "1",
+  "full_name": "John Doe",
+  "emails": [
+    "john.doe@example.com"
+  ],
+  "phones": [
+    "+15551234567"
+  ],
+  "location": {
+    "city": "San Francisco",
+    "region": "",
+    "country": "US"
+  },
+  "headline": "Software Engineer",
+  "current_company": "TechCorp",
+  "provenance": [
+    {
+      "field": "all",
+      "source": "recruiter_csv",
+      "method": "direct"
+    }
+  ],
+  "overall_confidence": 0.9
+}
